@@ -11,6 +11,7 @@
 		<link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -27,22 +28,18 @@
 		<!-- Main -->
 		<main class="container">
 
-			<section class="js-media-list">
-
-				<!-- Panel template -->
-				<div class="panel panel-default">
-					<div class="panel-body media">
-						<div class="media-left">
-							<img class="media-object" src="" alt="">
-						</div>
-						<div class="media-body">
-							<h4>Media Heading</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur veniam dignissimos consequatur cum molestias ipsa, nesciunt magni iste iure odit, quod, alias eum maxime soluta rem ad nisi hic eius.</p>
-						</div>
+			<section class="search">
+				<form action="#">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search Youtube Videos">
+						<span class="input-group-btn">
+							<button class="btn btn-default js-search-btn">Go!</button>
+						</span>
 					</div>
-				</div>
-				
+				</form>
 			</section>
+
+			<section class="js-media-list"></section>
 		</main>
 
 		<!-- Javascript Files -->

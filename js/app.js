@@ -64,7 +64,12 @@
 
 	$(document).ready(function () {
 
-		getYoutubeVideo("Sample");
+		$('.js-search-btn').on('click', function (event) {
+			event.preventDefault();
+
+			$('.js-media-list').empty();
+			getYoutubeVideo($(this).parent().siblings('input').val());
+		});
 	});
 
 }());
