@@ -1,0 +1,16 @@
+body {
+  font-family: 'Source Sans Pro', 'Lato', sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.navbar-default {
+  background-color: #6799FF;
+  color: #FFFFFF;
+}
+
+.navbar-default .navbar-brand {
+  color: #FFFFFF;
+}
