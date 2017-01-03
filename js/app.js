@@ -13,15 +13,19 @@
 	}
 
 	function makeItemPanel(item) {
-		var thumbnail = item.snippet.thumbnails.default.url;
-		var title = item.snippet.thumbnails.title;
+		var thumbnail = item.snippet.thumbnails.medium.url;
+		var title = item.snippet.title;
 		var description = item.snippet.description;
+		var videoId = item.id.videoId;
 
 		var output = '<div class="panel panel-default"><div class="panel-body media">';
 
-		output += '<div class="media-left"><img class="media-object" src="' + thumbnail + '" alt="' + title  + '"></div>';
+		output += ('<div class="media-left">' +
+			'<a href="https://www.youtube.com/watch?v=' + videoId + '">' +
+			'<img class="media-object" src="' + thumbnail + '" alt="' + title  + '"></a></div>');
 
-		output += '<div class="media-body">' + description + '</div></div></div>';
+		output += ('<div class="media-body"><h3 class="media-heading">' + title + '</h3>' + description + '</div>');
+		output += '</div></div>';
 
 		return output;
 	}
@@ -49,7 +53,8 @@
 				part: 'snippet',
 				key: 'AIzaSyBVqUB0mGsExdfxq1x7LiK2KGvJTPWDGJ4',
 				q: query,
-				maxResults: 20
+				maxResults: 10,
+				type: 'video'
 			},
 			dataType: 'json',
 			success: function (data) {
